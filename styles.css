@@ -323,6 +323,7 @@ nav{
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     grid-gap: 1.5rem;
     margin-bottom: 2rem;
+    text-align: center;
 }
 
 .game-grid-item p{
@@ -335,6 +336,25 @@ footer{
     text-align: center;
     color: rgba(0,0,0,.7);
 }
+
+.shop-btn{
+    background-color: #eb648c;
+    text-align: middle;
+    border-radius: 2rem;
+    color: #fafafa;
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    text-transform: uppercase;
+    transition: background-color 650ms;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.shop-btn:hover{
+    background-color: #ce587b;
+}
+
 
 /*Media queries*/
 @media screen and (min-width: 350px){
@@ -380,22 +400,18 @@ footer{
         flex-direction: row;
         transition: initial;
     }
-
     .menu-icons{
         display: none;
     }
-
     .nav-item{
         margin: 0 2.5rem;
     }
-
     .nav-link,
     .current{
         color: #fafafa;
         position: relative;
         font-size: 1.8rem;
     }
-
     .nav-link::before,
     .current::before{
         content: "";
@@ -409,23 +425,18 @@ footer{
         transform-origin: left;
         transition: transform 650ms;
     }
-
     .current::before{
         transform:scaleX(1);
     }
-
     .nav-link:hover::before{
         transform: scaleX(1);
     }
-
     .hero{
         height: 60vh;
     }
-
     .main-message{
         transform: translateY(70%);
     }
-
     .title-heading h1{
         font-size: 2.5rem;
     }
