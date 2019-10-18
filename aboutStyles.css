@@ -1,0 +1,475 @@
+/*Global Styles*/
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html{
+    font-family: 'Nunito', sans-serif;
+    font-size: 10px;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{ 
+    list-style: none
+}
+
+p{
+    font-size: 1.6rem;
+}
+
+img{
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+section{
+    padding: 5rem 0;
+}
+
+
+/*Header Style*/
+header{
+    width: 100%;
+    height: 5rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.container{
+    width: 100%;
+    max-width: 118rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+nav{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(255,255,255,.2);
+}
+
+.nav-brand{
+    width: 6rem;
+}
+
+.menu-icons i{
+    font-size: 3.5rem;
+    color: #fafafa;
+    cursor: pointer;
+}
+
+.close i{
+    color: #eb648c;
+}
+
+.nav-list{
+    width: 25rem;
+    height: 100vh;
+    background-color: #d7d4ed;
+    position: fixed;
+    top: 0;
+    right: -26rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1500;
+    transition: all 650ms ease-in-out;
+}
+
+.nav-list.active{
+    right: 0;
+}
+
+.close{
+    position: absolute;
+    top: 1rem;
+    left: 1.5rem;
+}
+
+.nav-item{
+    margin: 1.5rem 0;
+}
+
+.nav-link{
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    color: rgba(0,0,0,.7);
+}
+
+/*Hero style*/
+.hero{
+    width: 100%;
+    height: 80vh;
+    background: linear-gradient(135deg, rgba(49,24,131,.9) 0%, rgba(72,56,149,0.8) 100%), url("images/header-bg.jpg") center no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.hero .container{
+    max-width: 108rem;
+    display: flex;
+    height: 65vh;
+    align-items: center;
+}
+
+.main-message
+{
+    width: 100%;
+    max-width: 50rem;
+    color: #fafafa;
+    text-transform: uppercase;
+    transform: translateY(20%);
+}
+
+.main-message h3{
+    font-family: 'Aldrich', sans-serif;
+    font-size: 3rem;
+}
+
+.main-message h1{
+    font-family: 'Aldrich', sans-serif;
+    font-size: 4.6rem;
+    margin: 1rem 0;
+}
+
+.main-text
+{
+    width: 100%;
+    max-width: 50rem;
+    color: #fafafa;
+    text-transform: uppercase;
+    transform: translateY(20%);
+}
+
+.main-text p{
+    font-family: 'Nunito', sans-serif;
+    margin: 2rem 0;
+    text-transform: initial;
+}
+
+/*Footer Style*/
+.site-footer{
+    width: 100%;
+    text-align: center;
+    margin-top: 3rem;
+    padding: 2rem 0;
+    position: absolute;
+    background-image: linear-gradient(135deg, rgba(49,24,131,.9) 0%, rgba(72,56,149,0.8) 100%);
+}
+.up{
+    position: absolute;
+    width: 6rem;
+    height: 6rem;
+    background-color: #eee;
+    top: -3rem;
+    right: 7.5rem;
+    border-radius: 100%;
+    display: flex;
+    animation: pulse 3.5s infinite;
+    cursor: pointer;
+} 
+.up i{
+    color: #221e3f;
+    font-size: 2rem;
+    margin: auto;
+}
+.site-footer .container{
+    max-width: 140rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.footer-text{
+    margin-top: 2.5rem;
+    margin-right: 1rem;
+    color: #fafafa;
+}
+.footer-icons .social-icons{
+    display: flex;
+    justify-content: center;
+    margin-top: 2.5rem;
+    margin-left: 1rem;
+    
+}
+.footer-icons .social-icons a{
+    margin: 0 2rem;
+    font-size: 2.5rem;
+    color: #fafafa;
+}
+.social-icons a.facebook:hover
+{
+  color:#3b5998;
+}
+.social-icons a.twitter:hover
+{
+  color:#00aced;
+}
+.social-icons a.reddit:hover
+{
+  color:#FF4500;
+}
+.social-icons a.instagram:hover
+{
+  color:#C13584;
+}
+
+/*Cards Style*/
+.heading{
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    letter-spacing: 3px;
+    margin-right: -3px;
+    margin-bottom: 5rem;
+    text-align: center;
+    color: #333;
+    position: relative;
+}
+
+.heading::after{
+    content: " ";
+    width: 12rem;
+    height: 1.1rem;
+    background-color: #eb648c;
+    position: absolute;
+    bottom: -2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2rem;
+}
+
+.card-wrapper{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+.card{
+    width: 32rem;
+    background-color: #ebeef8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0;
+    box-shadow: .5rem .5rem 3rem rgba(0,0,0,0.2);
+}
+
+.card .card-img{
+    width: 100%;
+    height: 26rem;
+    object-fit: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+}
+
+.profile-img{
+    width: 15rem;
+    height: 15rem;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-top: -10rem;
+    z-index: 999;
+    border: 8px solid #ebeef8;
+}
+
+.card h1{
+    font-size: 2.5rem;
+    color: #333;
+    margin: 1.5rem 0;
+}
+
+.job-title{
+    color: #777;
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+.about{
+    font-size: 1.5rem;
+    margin: 1.5rem 0;
+    font-style: italic;
+    text-align: center;
+    color: #333;
+}
+
+.card .btn{
+    padding: 1rem 2.5rem;
+    background-color: #eb648c;
+    border-radius: 2rem;
+    margin: 1rem 0; 
+    text-transform: uppercase;
+    color: #eee;
+    font-size: 1.4rem;
+}
+
+.card .btn:hover{
+    background-color: #ce587b;
+}
+
+.about-social-media{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2rem 0;
+    margin-top: 1.5rem;
+    border-top: 1px solid rgba(0,0,0,.1);
+}
+
+.about-social-media i{
+    font-size: 3rem;
+}
+
+.about-social-media .fa-facebook-square{
+    color: #3b5999;
+}
+.about-social-media .fa-facebook-square:hover{
+    color: #304980;
+}
+
+.about-social-media .fa-twitter-square{
+    color: #00aced;
+}
+.about-social-media .fa-twitter-square:hover{
+    color: #0284b5;
+}
+
+.about-social-media .fa-instagram{
+    color: #C13584;
+}
+.about-social-media .fa-instagram:hover{
+    color: #9e296b;
+}
+
+.about-social-media .fa-linkedin{
+    color: #0e76a8;
+}
+.about-social-media .fa-linkedin:hover{
+    color: #09567a;
+}
+
+
+/*Animations*/
+@keyframes pulse {
+    0%{
+      box-shadow: 0 0 0 0 rgba(235, 100, 117, 0.99);
+    }
+    70%{
+      box-shadow: 0 0 0 2rem rgba(235, 100, 117, 0);
+    }
+    100%{
+      box-shadow: 0 0 0 0 rgba(235, 100, 117, 0);
+    }
+}
+
+/*Media queries*/
+@media screen and (min-width: 350px){
+    .main-message{
+        transform: translateY(40%)
+    }
+}
+
+@media screen and (min-width: 470px){
+
+}
+
+@media screen and (min-width: 700px)
+{
+    header{
+        height: 8rem;
+    }
+    .nav-brand{
+        width: 12rem;
+    }
+    .nav-list{
+        width: initial;
+        height: initial;
+        background-color: transparent;
+        position: initial;
+        top: initial;
+        right: initial;
+        flex-direction: row;
+        transition: initial;
+    }
+    .menu-icons{
+        display: none;
+    }
+    .nav-item{
+        margin: 0 2.5rem;
+    }
+    .nav-link,
+    .current{
+        color: #fafafa;
+        position: relative;
+        font-size: 1.8rem;
+    }
+    .nav-link::before,
+    .current::before{
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -.5rem;
+        background-color: #eb648c;
+        width: 100%;
+        height: 2px;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 650ms;
+    }
+    .current::before{
+        transform:scaleX(1);
+    }
+    .hero{
+        height: 60vh;
+    }
+    .main-message{
+        transform: translateY(70%);
+    }
+    .title-heading h1{
+        font-size: 2.5rem;
+    }
+    .card-wrapper{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .card{
+        margin: 2rem;
+    }
+    .card:hover{
+        transform: scale(1.05);
+    }
+}
+
+@media screen and (min-width: 950px)
+{
+    .site-footer .container{
+        flex-direction: row;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    .hero{
+        height: 75vh;
+    }
+    .discord{
+        height: 60vh;
+    }
+}
